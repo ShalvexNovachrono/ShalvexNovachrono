@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nava Majumdar</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<!-- Video Background -->
+		<video
+			src="https://mylivewallpapers.b-cdn.net/wp-content/uploads/Nature/PREVIEW-Sakura-Tree-Moon.mp4"
+			class="background_video"
+			id="background_video"
+			loop
+			autoplay
+			muted
+			playsinline
+		></video>
+
+		<!-- Updated Navbar -->
+		<div class="navbar">
+			<a href="/" class="logo"
+				><img src="https://avatars.githubusercontent.com/u/55297590?v=4" alt="UI"
+			/></a>
+			<div class="nav-container">
+				<!-- Hamburger menu button for mobile -->
+				<button class="dropdown-toggle" id="nav-toggle">
+					<i class="fa fa-bars"></i>
+				</button>
+				<!-- Navigation links -->
+				<div class="nav-links" id="nav-links">
+					<a href="https://github.com/ShalvexNovachrono" target="_blank"
+						><i class="fa fa-github"></i> GitHub</a
+					>
+					<a href="https://www.youtube.com/@Nava-Majumdar" target="_blank"
+						><i class="fa fa-youtube-play"></i> YouTube</a
+					>
+					<a
+						href="https://www.linkedin.com/in/nava-majumdar-299a61243/"
+						target="_blank"
+						><i class="fa fa-linkedin"></i> LinkedIn</a
+					>
+				</div>
+			</div>
+		</div>
+
+		<!-- Your Portfolio Content -->
+		<div class="main-content">
+			<div class="profile content-box">
+				<div class="picture">
+					<img
+						src="https://storage.googleapis.com/replit/images/1629744315977_2cb581e7d4006bb7f3e6efa28a709470.gif"
+						alt="Nava Majumdar Profile Picture"
+					/>
+				</div>
+				<div class="large">
+					<div class="name">Nava Majumdar</div>
+					<div class="aboutme">
+						Hello, I'm Nava Majumdar, a passionate hobbyist programmer who
+						loves to build and experiment with technology. My work shows a
+						strong focus on game development, where I frequently use Unity
+						and C# to create interactive experiences, even diving into
+						real-time multiplayer features with WebSockets.
+						<br /><br />
+						Alongside gaming, I have a solid background in web
+						technologies, building back-end systems with PHP and JavaScript
+						and connecting them to databases like SQLite. My portfolio also
+						showcases a strong foundation in C++ and Java, where I've
+						tackled everything from classic algorithms to object-oriented
+						design. This diverse skill set is reflected in the variety of
+						projects you can explore below.
+					</div>
+				</div>
+			</div>
+
+			<!-- Projects will be loaded here by JavaScript -->
+			<div class="projects content-box">
+				<h2>My Projects from GitHub</h2>
+				<div id="projects-container">
+					<p>Loading projects...</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Script for GitHub projects and dropdown menu -->
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,305 @@
+/* General Setup */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #111; /* Fallback for video */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Background Video */
+.background_video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0 20px;
+    height: 56px;
+    position: relative; /* For dropdown positioning */
+    z-index: 10; /* --- ADDED THIS LINE --- Ensures navbar is on top */
+}
+
+.navbar .logo {
+    padding: 8px 0;
+}
+
+.navbar .logo img {
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* Navigation Links Styles */
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+
+.nav-links a i {
+    font-size: 20px; /* Icon size */
+}
+
+/* Dropdown Toggle Button (Hidden on large screens) */
+.dropdown-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 20px;
+    padding-top: 80px; /* Space for navbar */
+}
+
+.content-box {
+    background-color: rgba(25, 35, 90, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: whitesmoke;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+}
+
+.profile .picture img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #a6cbff;
+}
+
+.profile .large .name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile .large .aboutme {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.profile .large .aboutme a {
+    color: #a6cbff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.profile .large .aboutme a:hover {
+    text-decoration: underline;
+}
+
+/* Projects Section */
+.projects h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    border-bottom: 2px solid #a6cbff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.project .details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project .details .name {
+    font-size: 22px;
+    font-weight: bolder;
+    color: #a6cbff;
+}
+
+.project .details .description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.language-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.project .details .links a {
+    display: inline-block;
+    font-weight: bolder;
+    text-decoration: none;
+    background-color: #a6cbff;
+    color: #111;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project .details .links a:hover {
+    background-color: #8aaeff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 743px) {
+    .main-content {
+        padding-top: 70px;
+    }
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Show the dropdown button */
+    .dropdown-toggle {
+        display: block;
+    }
+
+    /* Hide the links by default on mobile */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 56px; /* Position below the navbar */
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        width: 200px;
+        border-radius: 0 0 0 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Style for when the dropdown is active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 15px;
+        border-bottom: 1px solid #444;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 15px; 
+    border: 2px solid #000;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4e4e4e;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a99191;
+}
+
+::-webkit-scrollbar-button:single-button {
+    background: #4e4e4e;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+::-webkit-scrollbar-button:single-button:hover {
+    background: #a99191;
+}
+
+/* ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background: #4e4e4e;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: #4e4e4e;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+ */
+
+::-webkit-scrollbar-track-piece {
+    background: #1e1e1e;
+    border: 2px solid #000;
+}
+
+::-webkit-scrollbar-corner{
+    background: #1e1e1e;
+}
