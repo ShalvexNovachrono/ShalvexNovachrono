@@ -1,21 +1,16 @@
-// Wait for the HTML document to be fully loaded before running the script
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Logic for Responsive Navigation Dropdown ---
   const navToggle = document.getElementById("nav-toggle");
   const navLinks = document.getElementById("nav-links");
 
-  // Toggle the 'active' class on the nav links when the button is clicked
   navToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
 
-  // --- Logic for fetching GitHub Projects ---
   const GITHUB_USERNAME = "ShalvexNovachrono";
   const apiUrl = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&direction=desc`;
 
   const projectsContainer = document.getElementById("projects-container");
 
-  // Function to fetch and display repositories
   async function fetchGitHubProjects() {
     try {
       const response = await fetch(apiUrl);
@@ -24,12 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       const repos = await response.json();
 
-      // Clear the "Loading..." message
       projectsContainer.innerHTML = "";
 
-      // Loop through each repository and create a card for it
       repos.forEach((repo) => {
-        // Skip forked repositories if you want
         if (repo.fork) {
           return;
         }
@@ -37,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const projectEl = document.createElement("div");
         projectEl.classList.add("project");
 
-        // Use innerHTML to build the card structure
         projectEl.innerHTML = `
                     <div class="details">
                         <div class="name">${repo.name}</div>
@@ -78,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // A simple function to assign colors to languages
   function getLanguageColor(language) {
     const colors = {
       JavaScript: "#f1e05a",
@@ -93,9 +83,8 @@ document.addEventListener("DOMContentLoaded", () => {
       C: "#555555",
       PHP: "#4F5D95",
     };
-    return colors[language] || "#ccc"; // Default color
+    return colors[language] || "#ccc"; 
   }
 
-  // Call the function to start the process
   fetchGitHubProjects();
 });

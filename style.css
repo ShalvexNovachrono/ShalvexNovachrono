@@ -1,8 +1,7 @@
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: #0f0c16; 
+    background-color: #0f0c16;
 }
 
 * {
@@ -25,11 +24,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #ffffff47;
     padding: 0 20px;
     height: 56px;
-    position: relative; 
-    z-index: 10; 
+    position: relative;
+    border-radius: 20px;
+    margin: 10px;
+    z-index: 10;
 }
 
 .navbar .logo {
@@ -53,14 +54,15 @@ body {
     font-size: 16px;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease-in-out, color 0.3s;
     display: flex;
     align-items: center;
-    gap: 8px; 
+    gap: 8px;
 }
 
 .nav-links a:hover {
-    background-color: #555;
+    background-color: #ada4a4;
+    color: #494646ff;
 }
 
 .nav-links a i {
@@ -78,19 +80,18 @@ body {
 
 .main-content {
     padding: 20px;
-    padding-top: 80px; 
+    padding-top: 80px;
 }
 
 .content-box {
-    background-color: rgba(25, 35, 90, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    color: whitesmoke;
+    color: #494646ff;
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 8px;
 }
-
 
 .profile {
     display: flex;
@@ -122,11 +123,13 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
+
 .profile .large .aboutme a:hover {
     text-decoration: underline;
 }
 
-.projects h2 {
+.projects h2,
+.github-stats h2 {
     margin-top: 0;
     font-size: 2rem;
     border-bottom: 2px solid #a6cbff;
@@ -143,7 +146,7 @@ body {
 .project {
     padding: 20px;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .project .details {
@@ -198,17 +201,43 @@ body {
     color: #111;
     padding: 8px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out, color 0.3s;
 }
 
 .project .details .links a:hover {
-    background-color: #8aaeff;
+    background-color: #111;
+    color: #8aaeff;
+}
+
+.github-stats h2 {
+    text-align: center;
+}
+
+.stats-container,
+.streak-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.streak-container {
+    margin-top: 15px;
+}
+
+.stats-container img,
+.streak-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 @media screen and (max-width: 743px) {
     .main-content {
         padding-top: 70px;
     }
+
     .profile {
         flex-direction: column;
         text-align: center;
@@ -222,16 +251,16 @@ body {
     .nav-links {
         display: none;
         position: absolute;
-        top: 56px;
+        top: 58px;
         right: 0;
-        background-color: #333;
+        background-color: rgb(209, 193, 193, 0.75);
         flex-direction: column;
         width: 200px;
-        border-radius: 0 0 0 8px;
+        border-radius: 8px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease-in-out, color 0.3s;
     }
 
-   
     .nav-links.active {
         display: flex;
     }
@@ -239,12 +268,21 @@ body {
     .nav-links a {
         width: 100%;
         padding: 15px;
-        border-bottom: 1px solid #444;
+        color: #494646ff;
+    }
+
+    .nav-links a:hover {
+        background-color: #ada4a4;
+        color: whitesmoke;
+    }
+
+    .stats-container {
+        flex-direction: column;
     }
 }
 
 ::-webkit-scrollbar {
-    width: 15px; 
+    width: 15px;
     border: 2px solid #000;
 }
 
@@ -256,7 +294,7 @@ body {
     background: #4e4e4e;
     border: 2px solid #000;
     border-radius: 5px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -267,31 +305,18 @@ body {
     background: #4e4e4e;
     border: 2px solid #000;
     border-radius: 5px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 ::-webkit-scrollbar-button:single-button:hover {
     background: #a99191;
 }
 
-/* ::-webkit-scrollbar-button:single-button:vertical:decrement {
-    background: #4e4e4e;
-    border: 2px solid #000;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-button:single-button:vertical:increment {
-    background: #4e4e4e;
-    border: 2px solid #000;
-    border-radius: 5px;
-}
- */
-
 ::-webkit-scrollbar-track-piece {
     background: #1e1e1e;
     border: 2px solid #000;
 }
 
-::-webkit-scrollbar-corner{
+::-webkit-scrollbar-corner {
     background: #1e1e1e;
 }

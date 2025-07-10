@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-        <title>Nava Majumdar | Portfolio</title>
+		<link rel="icon" href="./favicon.ico" type="image/x-icon" />
+		<title>Nava Majumdar | Portfolio</title>
 		<link rel="stylesheet" href="style.css" />
 		<link
 			rel="stylesheet"
@@ -13,7 +13,6 @@
 		/>
 	</head>
 	<body>
-		<!-- Video Background -->
 		<video
 			src="https://mylivewallpapers.b-cdn.net/wp-content/uploads/Nature/PREVIEW-Sakura-Tree-Moon.mp4"
 			class="background_video"
@@ -24,17 +23,14 @@
 			playsinline
 		></video>
 
-		<!-- Updated Navbar -->
 		<div class="navbar">
 			<a href="/" class="logo"
 				><img src="favicon.ico" alt="UI"
 			/></a>
 			<div class="nav-container">
-				<!-- Hamburger menu button for mobile -->
 				<button class="dropdown-toggle" id="nav-toggle">
 					<i class="fa fa-bars"></i>
 				</button>
-				<!-- Navigation links -->
 				<div class="nav-links" id="nav-links">
 					<a href="https://github.com/ShalvexNovachrono" target="_blank"
 						><i class="fa fa-github"></i> GitHub</a
@@ -51,7 +47,6 @@
 			</div>
 		</div>
 
-		<!-- Your Portfolio Content -->
 		<div class="main-content">
 			<div class="profile content-box">
 				<div class="picture">
@@ -80,7 +75,26 @@
 				</div>
 			</div>
 
-			<!-- Projects will be loaded here by JavaScript -->
+			<div class="github-stats content-box">
+				<h2>GitHub Stats</h2>
+				<div class="stats-container">
+					<img
+						src="https://github-readme-stats.vercel.app/api?username=ShalvexNovachrono&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&hide_title=true&rank_icon=github"
+						alt="ShalvexNovachrono's GitHub Stats"
+					/>
+					<img
+						src="https://github-readme-stats.vercel.app/api/top-langs/?username=ShalvexNovachrono&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&hide_title=true"
+						alt="ShalvexNovachrono's Top Languages"
+					/>
+				</div>
+				<div class="streak-container">
+					<img
+						src="https://streak-stats.demolab.com/?user=ShalvexNovachrono&theme=tokyonight&hide_border=true&background=00000000"
+						alt="ShalvexNovachrono's GitHub Streak"
+					/>
+				</div>
+			</div>
+
 			<div class="projects content-box">
 				<h2>My Projects from GitHub</h2>
 				<div id="projects-container">
@@ -89,7 +103,6 @@
 			</div>
 		</div>
 
-		<!-- Script for GitHub projects and dropdown menu -->
 		<script src="script.js"></script>
 	</body>
 </html>
