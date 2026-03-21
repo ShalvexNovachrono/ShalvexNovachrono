@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
   </a>
   <a href="https://shalvexnovachrono.site/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-4682B4?style=for-the-badge&logo=react&logoColor=white" alt="Portfolio"/>
+    <img src="https://shalvexnovachrono.site/favicon.ico" alt="Portfolio"/>
   </a>
 </p>
 
