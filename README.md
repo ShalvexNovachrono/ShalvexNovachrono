@@ -1,8 +1,3 @@
-<!--
-Hi Nava! This is your new, special README.
-It's designed to look great and automatically update with your GitHub stats.
-You don't need to change anything unless you want to, but it's ready to go!
--->
 
 <h1 align="center">Hi there, I'm Nava Majumdar 👋</h1>
 <h3 align="center">A Hobbyist Programmer | Game Developer | Web Enthusiast</h3>
@@ -14,11 +9,9 @@ You don't need to change anything unless you want to, but it's ready to go!
   <a href="https://www.youtube.com/@Nava-Majumdar" target="_blank">
     <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
   </a>
-  <!-- Optional: Add a link to your live portfolio once it's hosted!
-  <a href="https://your-portfolio-url.com" target="_blank">
+  <a href="https://shalvexnovachrono.site/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-4682B4?style=for-the-badge&logo=react&logoColor=white" alt="Portfolio"/>
   </a>
-  -->
 </p>
 
 ---
