@@ -4,6 +4,30 @@ body {
     background: linear-gradient(135deg, #0f0c16 0%, #1a1625 50%, #0f0c16 100%);
     background-attachment: fixed;
     color: #e0e0e0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+.bg-image {
+    position: absolute;
+    width: 1400px;
+    height: 1400px;
+    filter: blur(80px);
+    opacity: 0.4;
+    transform: translate(0px, 0px); 
+    transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 * {
@@ -20,7 +44,7 @@ body {
     padding: 0 25px;
     height: 60px;
     position: sticky;
-    top: 0;
+    top: 10px;
     border-radius: 15px;
     margin: 10px;
     z-index: 10;
@@ -29,6 +53,11 @@ body {
 
 .navbar .logo {
     padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .navbar .logo img {
@@ -36,6 +65,13 @@ body {
     border-radius: 50%;
     vertical-align: middle;
     transition: all 0.3s ease;
+}
+
+.navbar .logo span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
 }
 
 .navbar .logo img:hover {
@@ -332,7 +368,7 @@ body {
         top: 70px;
         right: 10px;
         background: linear-gradient(135deg, rgba(50, 50, 100, 0.15) 0%, rgba(30, 30, 60, 0.12) 100%);
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(100px);
         border: 1px solid rgba(166, 203, 255, 0.2);
         flex-direction: column;
         width: 220px;
@@ -420,7 +456,22 @@ body {
     flex: 2;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1430px) {
+    .sidebar {
+        flex: 1;
+    }
+
+    .main-panel {
+        flex: 1;
+    }
+}
+
+@media (max-width: 970px) {
+
+    .main-content {
+        padding-top: 5px;
+    }
+
     .layout-container {
         flex-direction: column;
     }
@@ -433,5 +484,9 @@ body {
 
     .main-panel {
         flex: 1;
+    }
+
+    .nav-links {
+        background: linear-gradient(135deg, rgba(30, 30, 60, 0.966) 0%, rgba(15, 15, 40, 0.966) 100%);
     }
 }
